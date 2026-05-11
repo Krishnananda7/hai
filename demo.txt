@@ -1,0 +1,22 @@
+install docker
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+
+docker --version
+sudo docker run hello-world
+mkdir my-python-app
+cd my-python-app
+nano app.py
+nano dockerfile
+nano requirements.txt
+sudo systemctl start docker
+sudo systemctl status docker
+docker build -t image-pqr
+docker images
+docker run -d -p 5000:5000 --name container image-pqr
+
+localhost:5000
