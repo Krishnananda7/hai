@@ -279,7 +279,7 @@ plugins->maven->maven integration
 download progress
 available plugins->init->xor attachments->download progress
 
-credentials->user(GitHub) and pass(token) -> create
+credentials->user(GitHub) and pass(git token) -> create
 
 new item->pipeline->scm->git->repo url->credential
 
