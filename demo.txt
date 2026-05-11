@@ -1,3 +1,4 @@
+1.
 install docker
 
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -20,3 +21,45 @@ docker images
 docker run -d -p 5000:5000 --name container image-pqr
 
 localhost:5000
+
+
+2.
+docker --version
+mkdir my-python-app
+cd my-python-app
+nano app.py
+nano dockerfile
+nano requirements.txt
+git init
+git config --global user.name  ""
+git config --global user.email ""
+git add .
+git commit -m "initial commit"
+git remote add origin "url"
+git branch -m master
+git push -u origin master
+(user , password)
+jenkins file -> username/image name
+
+sudo docker build -t my-python-app .
+docker tag my-python-app:latest username/my-python-app:latest
+docker images
+sudo docker run -d -p 5000:5000 --name container
+username/my-python-app:latest
+docker login -u username (password)
+sudo docker push username/my-python-app:latest
+In docker-myhub (push)
+
+open other terminal 
+sudo apt update
+sudo rm jenkins.war
+sudo rm -rf ~/.jenkins
+wget https://get.jenkins.io/war-stable/latest/jenkins.war
+java -jar jenkins.war httpPort=8089
+localhost:8089
+login to jenkins-credential-username-pass-dockerhub-credentials
+new item-pipeline-scm-git-url-credential
+save build
+
+
+
